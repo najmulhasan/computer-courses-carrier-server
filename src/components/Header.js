@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/UserContext';
+import logo from '../../src/images/logos.jpg'
 
 const Header = () => {
 
@@ -16,10 +17,9 @@ const Header = () => {
 
     return (
         <div>
-            <img src="/public/logos.jpg" alt="" />
-
             <div className="navbar bg-primary text-primary-content">
                 <Link to='/' className="btn btn-ghost text-xl">Computer Courses Carrier</Link>
+                <div className='profile-logo'><img height={35} width={35} src={logo} alt="" /></div>
 
                 <Link className="btn btn-ghost text-xl" to='/'>Home</Link>
                 <Link className="btn btn-ghost text-xl" to='/courses'>Courses</Link>
@@ -38,6 +38,7 @@ const Header = () => {
                 <br />
 
                 <input type="checkbox" value="synthwave" className="toggle theme-controller" />
+
 
             </div>
 
